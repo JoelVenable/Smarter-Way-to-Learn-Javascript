@@ -32,12 +32,11 @@ for (let i = 0; i <= 4; i++) {
 
 // Or...
 
-for (let i = 0; i <= cleanestCities.length; i++) {
+for (let i = 0; i < cleanestCities.length; i++) {
   if (cityToCheck === cleanestCities[i]) congrats();
 }
 
 // Also...
-
-for (let cleanCity in cleanestCities) {
-  if (cityToCheck === cleanCity) congrats();
+for (let i in cleanestCities) {
+  if (cityToCheck === cleanestCities[i]) congrats();
 }
