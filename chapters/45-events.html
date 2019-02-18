@@ -1,0 +1,33 @@
+<!--  JS powers the web...
+
+//  Event handling: we'll start with inline even though that is not advisable for production use.  The reason we are doing it this way is because it is easier to learn.
+
+
+
+When the following link is clicked, instead of going to another link, it reloads the page ("#"), then the 'onClick' property executes the Javascript alert message.
+
+Also note the use of single quotes '' inside the onClick property, since it is enclosed in double quotes.
+
+The page reload is also undesireable behavior, since it will also return the user to the top of the page when they may not have expected it.
+
+-->
+
+<a href="#" onClick="alert('Hi');">Click</a>   
+
+<!-- Better method-->
+
+<a href="Javascript:void(0)" onCLick="alert('Hi!');">Click Here instead</a>
+
+<!-- 
+  
+  This time nothing happens except for the alert message.  Better.
+
+  Also, while inline JS is frowned on, we could use a function instead for a slightly more elegant solution.
+
+-->
+<a href="Javascript:void(0)" onCLick="popup('Hi!');">Click Here instead</a>
+<script>
+function popup(message) {
+  alert(message);  
+}
+</script>

@@ -1,0 +1,15 @@
+<p>  In the last lesson we learned how to repurpose a link to make it trigger an event when clicked.  Better is to use a button to trigger an event since users are more likely to expect that behavior then...</p>
+
+<input type="button" value="Click" onClick="alert('Hello world!');">
+
+<p>An image can also be a hotlink.  Markup would look like this...</p>
+
+<a href="fake-example-page.html"><img src="button.png"></a>
+
+<p>You could have the image link trigger an event</p>
+
+<img src="button-greet.png" onClick="alert('Hello World!');">
+
+<p>Or you could have the event trigger a function...</p>
+
+<img src="button-greet.png" onClick="greetUser();">

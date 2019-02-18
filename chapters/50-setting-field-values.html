@@ -1,0 +1,32 @@
+<p>So how to automatically fill in city names once a zip code is entered?</p>
+
+<p>In this example we won't check for errors, we'll pretend that users are perfect!</p>
+
+<form>
+  ZIP:<br>
+  <input type="text" id="zip" onBlur="fillCity();"><br>
+  City:<br>
+  <input type="text" id="city">
+</form>
+
+<p>When the user clicks away from the zip code field, the 'fillCity()' method fires.</p>
+
+<script>
+  function fillCity() {
+    var cityName;
+    var zipEntered = document.getElementById("zip").value;
+    switch (zipEntered) {
+      case "60608":
+        cityName = "Chicago";
+        break;
+      case "68114":
+        cityName = "Omaha";
+        break;
+        case "53212":
+        cityName = "Milwaukee";
+    }
+    document.getElementById("city").value = cityName;
+  }
+</script>
+
+<p>This example shows that you can write information into a user field using the getElementById().value property. </p>

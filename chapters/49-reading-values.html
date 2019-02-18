@@ -1,0 +1,34 @@
+<p>Here is some sample form markup.</p>
+
+<form>
+  Email:
+  <input type="email">
+  <input type="submit" value="Submit">
+</form>
+
+<p>So let's give the input an id.</p>
+
+<form>
+  Email:
+  <input type="email" id="email">
+  <input type="submit" value="Submit">
+</form>
+
+<p>Next let's add an event handler.</p>
+
+<form onSubmit="checkAddress('email');">
+  Email:
+  <input type="email" id="email2">
+  <input type="submit" value="Submit">
+</form>
+
+<p>Note the event handler is in the 'form' tag, not the 'input' tags, because the submission event applies to the whole
+  form. Here's the event handler code...</p>
+
+<script>
+  function checkAddres(fieldId) {
+    if (document.getElementById(fieldId).value === "") {
+      alert("Email address required.");
+    }
+  }
+</script>

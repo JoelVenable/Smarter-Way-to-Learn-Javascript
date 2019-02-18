@@ -1,0 +1,12 @@
+<p>Let's say you have a text field and want it to turn yellow when the user clicks to type in the field:</p>
+
+Email:<br>
+<input type="email" size="30" onFocus="this.style.backgroundColor='yellow';">
+
+<p>Again, this is using inline styling which is not the recommended practice, just simplifies teaching.</p>
+
+<p>The 'onFocus' event fires when the user clicks on the element.  However we want the bg color to return to white when the user clicks away.  Enter the 'onBlur' event...</p>
+
+Email:<br>
+<input type="email" size="30" onFocus="this.style.backgroundColor='yellow';" onBlur="this.style.backgroundColor='white';">
+

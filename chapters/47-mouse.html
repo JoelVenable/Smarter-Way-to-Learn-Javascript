@@ -1,0 +1,15 @@
+<p>Suppose you want to display a before picture, and on hover switch the image to an after picture...</p>
+
+<img src="before-pic.jpg" onMouseover="src='after-pic.jpg'">
+
+<p>Note the above is NOT javascript, but HTML.  You could use javascript code inside the onMouseover property.</p>
+
+<h1 onMouseover="alert('Be sure to get your shopping done today.');">World Ends Tomorrow</h1>
+
+<p>How about the popular CSS color change on hover...  We can do that with Javascript too!</p>
+
+<a href="index.html" onMouseover="this.style.color='green';">Home Page</a>
+
+<p>So here's the onMouseover property that returns the original image when the mouse goes away from the image:</p>
+
+<img src="before-pic.jpg" onMouseover="src='after-pic.jpg'" onMouseout="before-pic.jpg">

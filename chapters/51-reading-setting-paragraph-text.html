@@ -1,0 +1,22 @@
+<p id="slowLoris">
+  Slow lorises are a group of several species of strepsirrhine primates which make up the genus Nycticebus. <a href="javascript:void(0);" onClick="expandLoris();"><em>Click for more.</em></a>
+</p>
+
+<p>Here is the function that controls the expanded paragraph.</p>
+
+<script>
+function expandLoris() {
+  var expandedParagraph = "Sit anim officia aliquip amet. Esse dolore id exercitation ullamco eiusmod anim pariatur aliqua esse. Ut officia elit velit aliquip commodo laboris adipisicing pariatur voluptate do cupidatat eiusmod. Aliqua do amet velit cillum consequat mollit laboris minim enim veniam ad velit exercitation. Irure pariatur pariatur duis dolore velit. Ullamco velit minim qui deserunt ad officia elit veniam deserunt deserunt.";
+  document.getElementById("slowLoris").innerHTML = expandedParagraph;
+}
+
+</script>
+
+<p>Line 2 assigns the long version of the text to a variable, then the innerHTML property is changed to the string.  Almost anything, including actual HTML tags, could be inserted using this property.  How about making a new list?</p>
+
+<script>
+function makeList() {
+  var listToPlace = "<ol><li>Slow loris</li><li>Fast loris</li><li>Just-right loris</li></ol>";
+  document.getElementById("lorisList").innerHTML = listToPlace;
+}
+</script>
