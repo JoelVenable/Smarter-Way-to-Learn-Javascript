@@ -1,0 +1,47 @@
+<p>So previously we learned how to add classes using the className += way.</p>
+
+<script>
+  function makeBig() {
+    document.getElementById("p1").className += " big";
+  }
+</script>
+
+<p>We could also edit the CSS directly using Javascript.</p>
+
+<script>
+  function makeBig2() {
+    document.getElementById("p1").style.fontSize = "2em";
+  }
+</script>
+
+<p>This statement adds a left-float property to an image.</p>
+
+<script>
+  document.getElementById("pic99").style.cssFloat = "left";
+</script>
+
+<p>We can make an element invisible.</p>
+
+<script>
+  document.getElementById("pic99").style.visibility = "hidden";
+</script>
+
+<p>We can change margins...</p>
+
+<script>
+  document.getElementById("mainPic").style.margin = "0 10px";
+</script>
+
+<p>Sometimes the style properties aren't obvious (cssFloat vs float) so it's best to check the language rules instead of guessing.</p>
+
+<p>Also, when reading properties, there are sometimes hidden gotchas.</p>
+
+<script>
+  var m = document.getElementById("mainPic").style.margin;
+</script>
+
+<p>The variable will store only margins declared inline, not via CSS classes.  Instead you can use the 'getComputedStyle()' property but it is not supported by IE8-.</p>
+
+<script>
+  var m = document.getComputedStyle("mainPic").margin;
+</script>

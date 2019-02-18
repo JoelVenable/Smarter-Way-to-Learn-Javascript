@@ -1,0 +1,38 @@
+<p>So resuming what we previously covered...</p>
+
+<script>
+  function swapPic() {
+    document.getElementById("before").src ="after-pic.jpg";
+  }
+
+</script>
+
+
+<p>So we're learning how to read properties of HTML using the getElementById() method. A more common way to code is to break into steps, first assigning the getElementById() output to a variable.</p>
+
+<script>
+  function swapPic2() {
+    var pic = document.getElementById("before");
+    pic.src = "after-pic.jpg";
+  }
+</script>
+
+<p>Here's the same thing, just replacing a link instead of an image...</p>
+
+<script>
+  function getAddress() {
+    var link = document.getElementById("link1");
+    return link.href;
+  }
+</script>
+
+<p>So if the HTML with id of 'link1' had an href of "https://wikipedia.org" that value would get returned by the getAddress() function.</p>
+
+<p>This function changes the formatting of a form by changing its class.</p>
+
+<script>
+  function enlargeForm() {
+    var frm = document.getElementById("link1");
+    frm.className = "jumbo";
+  }
+</script> 

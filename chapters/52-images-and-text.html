@@ -1,14 +1,29 @@
 <p>Let's give an image the option to disappear...  First we'll give it an id.</p>
 
-<img src="Blobfish.jpg" id="ugly">
+<img src="Blobfish.jpg" id="uglya">
 
 <p>Then we add an event handler.</p>
 
 <img src="Blobfish.jpg" id="ugly" onClick="makeInvisible();">
 
-
-<p> Then we add a CSS class for invisibility.
+<p> Then we add a CSS class for invisibility. </p>
   
 <style>
   .hidden { display: none; }
 </style>
+
+<p>The function called by the event handler adds the CSS "hidden" class, so it disappears using the 'display: none' property.</p>
+
+<script>
+function makeInvisible() {
+  document.getElementById("ugly").addClass("hidden");
+}
+</script>
+
+<p>Some notes:  
+  <ul>
+    <li>This is just a variation of things already learned.  In this example we used the className property instead of the innerHTML or the value properties.  </li>
+  <li>'className' is in camelCase, not 'class'.</li>
+  <li>Assigning a class name REPLACES any existing classes declared in the existing HTML code.  Perhaps we could use the addClass() method instead?</li>
+  </ul>
+</p> 

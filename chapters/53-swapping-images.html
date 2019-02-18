@@ -1,0 +1,27 @@
+<p>So previously we covered how to replace images.</p>
+
+<img src="before-pic.jpg" onMouseover="src='after-pic.jpg'">
+
+<p>Or we can call a function to make the swap.</p>
+
+<img src="before-pic.jpg" id="before" onMouseover="swapPic();">
+
+<script>
+  function swapPic() {
+    document.getElementById("before").src = "after-pic.jpg";
+  }
+</script>
+
+<p>But we could improve the code by making it reusable, with the bonus of preserving the meaning in the HTML document.</p>
+
+<img src="before-pic.jpg" id="before" onMouseover="newSwapPic(id,'after-pic.jpg');">
+
+<script>
+  function newSwapPic(eid, newPic) {
+    document.getElementById(eId).src = newPic;
+  }
+</script>
+
+<p>Then we could use the same function to swap the image back on blur.</p>
+
+<img src="before-pic.jpg" id="before" onMouseover="newSwapPic(id,'after-pic.jpg');" onBlur="newSwapPic(id,'before-pic.jpg');">
