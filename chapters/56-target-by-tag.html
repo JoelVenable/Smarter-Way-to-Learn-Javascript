@@ -1,0 +1,57 @@
+So what if you want to target multiple elements with the same function?  We could give each paragraph an ID to enable a function...
+
+<script>
+  document.getElementById(theID).style.fontSize = "2em";
+</script>
+
+Instead we could use the getElementByTagName() method.
+
+<script>
+  var parag = document.getElementsByTagName("p");
+</script>
+
+The variable 'parag' now holds an array of all the paragraphs in the document.  So let's assume our markup has the following 'p' tags:
+
+<p>This bed is too small.</p>
+<p>This bed is too big.</p>
+<p>This bed is just right.</p>
+
+We could then write:
+
+<script>
+  var someText = parag[1];
+</script>
+
+and our variable would contain "This bed is too big."  We could then write:
+
+<script>
+  parag[1].innerHTML = "This SUV is too big.";
+</script>
+
+and the paragraph text changes to the assigned string.  We could also loop...
+
+Note I'm bringing back some more advanced stuff that I've learned.  
+<script>
+  parag.foreach(el => {
+    el.style.fontFamily = "Verdana, Geneva, sans-serif";
+  });
+</script>
+
+This stantement maeks a collection of all the images and assigns to the variable 'pics':
+
+<script>
+  var pics = document.getElementsByTagName("img");
+</script>
+
+Or we could get all the 'div's:
+
+<script>
+  var divs = document.getElementsByTagName("div");
+</script>
+
+Or unordered lists.
+
+<script>
+  var ulists = document.getElementsByTagName("ul");
+</script>
+

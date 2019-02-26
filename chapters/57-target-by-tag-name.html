@@ -1,0 +1,19 @@
+In the last chapter, we learned about assigning paragraphs to an array-like element.  But what if we want to be more selective?
+
+Let's assume we have a 'div' with id="rules":
+
+<script>
+  var e = document.getElementById("rules");
+  var ruleParagraphs = e.getElementsByTagName("p");
+</script>
+
+So what if we have a table that we'd like to change when user clicks a button:
+
+<script>
+  var t = document.getElementById("table9");
+  var cells = t.getElementsByTagName("td");
+  cells.foreach(el => {
+    el.style.backgroundColor = "pink";
+  });
+</script>
+
