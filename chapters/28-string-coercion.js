@@ -1,5 +1,5 @@
 //var currentAge = prompt("Enter your age.");
-var currentAge = 32;
+var currentAge = "32"; 
 // the value returned by a prompt is a string as we covered earlier.
 
 var yearsEligibleToVote = currentAge - 18;  // currentAge is temporarily coerced to a number.

@@ -1,0 +1,24 @@
+<script>
+//  How to add an HTML node with only javascript:
+
+var nodeToAdd = document.createElement("p");
+
+//  
+
+var imgNodeToAdd = document.createElement("img");
+
+//  Once we've created an element, we may need to add an attribute...
+
+nodeToAdd.setAttribute("class", "regular");
+nodeToAdd.setAttribute("id", "billy");
+nodeToAdd.innerHTML = "Billy bobby was a bear.  Billy Bobby had no hair."
+
+
+imgNodeToAdd.setAttribute("border", "1");
+var newTxt = document.createTextNode("Hello!");
+nodeToAdd.appendChild(newTxt);  // Another way to create text content inside an element
+
+
+//  We still need to add this node that we created to the webpage.
+
+</script>

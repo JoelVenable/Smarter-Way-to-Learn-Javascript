@@ -1,4 +1,4 @@
-// If conditions execute code if the evaulation == true, else code executes otherwise.
+// 'If' conditions execute code if the evaulation == true, else code executes otherwise.
 
 // What if you want code to execute like this...
 

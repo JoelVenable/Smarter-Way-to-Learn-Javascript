@@ -1,0 +1,30 @@
+So we learned about childNodes[x]; there's another way.
+firstChild, lastChild.
+
+<div id="div1">
+    <div id="div2">
+        <p>Chicago</p>
+        <p>Kansas City</p>
+        <p>St. Louis</p>
+    </div>
+</div>
+
+<script>
+var kidNode = document.getElementById("div2");
+var pNode = kidNode.parentNode;
+
+//  Use nextSibling and previousSibling...
+
+var firstEl = document.getElementById("div1");
+var secondEl =firstEl.nextSibling;
+
+// if there is no nextSibling or previousSibling, you get null.
+
+var nonexistentEl = firstEl.previousSibling;
+
+//  Also note that using these methods we may fall victim to the 
+//  #text junk nodes.
+
+//  As mentioned previously, you're often better off targeting
+//  the elements you wish to change directly via an id.
+</script>

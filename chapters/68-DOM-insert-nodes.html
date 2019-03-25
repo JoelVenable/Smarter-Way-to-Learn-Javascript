@@ -1,0 +1,37 @@
+<script>
+
+var parentDiv = document.getElementById("div1");
+var newParagraph = document.createElement("p");
+var t = document.createTextNode("Hello World!");
+newParagraph.appendChild(t);
+parentDiv.appendChild(newParagraph);
+
+//  The appendChild method always places the inserted node at the end of 
+//  the parent's existing nodes.  So if the example div above already
+//  had 3 paragraphs, the new paragraph we created would be created at the end.
+
+//  The other option is the 'insertBefore()' method.
+
+var parentDiv2 = document.getElementById("div2");
+var newPar = document.createElement("p");
+var text = document.createTextNode("I'm Bobby Flay!");
+newPar.appendChild(text);
+paragraph1 = parentDiv2.firstChild;
+parentDiv.insertBefore(newPar, paragraph1);
+
+//  There is no insertAfter method.  To accomplish placement, 
+//  target the node after the desired location:
+
+var target = parentDiv2.childNodes[1];
+parentDiv.insertBefore(newPar, target.nextSibling);
+
+//  To remove a node:
+
+var parentDiv3 =document.getElementById("div3");
+
+var nodeToRemove = parentDiv3.childNodes[2];
+parentDiv3.removeChild(nodeToRemove);
+
+
+
+</script>

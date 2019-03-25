@@ -1,0 +1,38 @@
+<script>
+var nType = targetNode.nodeType;
+
+// if node is an element, nType will be assigned 1.
+// if node is (junk) text, nType will be 3.
+// Add'l information via nodeName property.
+
+var parent = document.getElementById("div1");
+var target = parent.firstChild;
+nName = target.nodeName;
+
+//  Lines 1 and 2 target the first child of div1.
+//  Line 3 assigns the value of the nodeName property to nName.
+//  If node is an element, nName will be assigned "P" or "DIV" (in all CAPS).
+//  If node is text, nName will be "#text" (in lowercase).
+
+var nTextContent = target.nodeValue;
+</script>
+
+<h2 id="tag">Do <em>not</em> hit!</h2>
+
+<script>
+// So let's practice...
+var h2 = document.getElementById("tag");
+var targetText = h2.firstChild; 
+var textContent = targetText.nodeValue; // "Do "
+var el2 = targetText.nextSibling; // 'em' element
+var el2text = el2.firstChild.nodeValue; // "not"
+var el3text = el2.nextSibling.nodeValue; // " hit!"
+
+
+//  Note the difference between nodeValue and innerHTML:
+//  nodeValue - property of the node itself
+console.log(h2.nodeValue); // null
+//  innerHTML -contains the entire contents of an element, including children.
+console.log(h2.innerHTML); // "Do <em>not</em> hit!"
+
+</script>

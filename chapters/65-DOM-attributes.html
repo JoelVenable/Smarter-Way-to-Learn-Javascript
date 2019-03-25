@@ -1,0 +1,39 @@
+
+
+<a href="http://www.amazon.com">Shop</a>
+
+So we know "Shop" is the only child node of the 'a' element;
+what is the 'href'? 
+
+An attribute.
+
+<div id="p1"></div>
+<p class="special"></p>
+<img src="images/slow-loris.png" alt="loris is slow">
+<span  style="font-size:24px;"></span>
+
+<div id="div1" class="btn btn__red"></div>
+
+All of the items with orange text are attributes.
+
+<script>
+var target = document.getElementById("p1");
+var hasClass = target.hasAttribute("class");  // false
+
+//  The 'hasAttribute' method checks to see if the target has 
+//  an attribute called 'class'.  
+
+//  We can also retrieve the attribute value with the 
+//  'getAttribute' getter method.
+
+var target = document.getElementById("div1");
+var attVal = target.getAttribute("class");  //  "btn btn__red"
+
+//  There's also a setter method:
+
+target.setAttribute("class", "btn");  
+
+//  In this instance, the "btn__red" class is removed.
+
+
+</script>

@@ -58,5 +58,7 @@ function addNumbers() {
   return theSum;  // Different from the global theSum, but they now happen to contain the same value.
 }
 
-// Generally a bad idea to manipulate global variables from within a function.  The philosophy of a function is that it should be an entirely self-contained block of code that does one specific thing.  By manipulating a global variable you're depending on external state...
+// Generally a bad idea to manipulate global variables from within a function.  The philosophy of a function is that it 
+// should be an entirely self-contained block of code that does one specific thing.  By manipulating a global variable you're 
+// depending on external state...
 

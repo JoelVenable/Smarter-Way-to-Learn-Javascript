@@ -13,7 +13,7 @@ for (var i = 0; i < textVar.length; i++) {
 
 var firstChar = textVar.indexOf("World War II");
 
-// If the segment exists, the index position of the first character of the FIRST INSTANCE of the given string.
+// If the segment exists, the index position of the first character of the FIRST INSTANCE of the given string is returned.
 
 // If the segment doesn't exist, the -1 value is assigned to the firstChar variable.
 

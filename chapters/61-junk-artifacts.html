@@ -1,0 +1,58 @@
+Some browsers interpret the whitespace used for 
+readability of the HTML document as separate elements.  
+They'll show up as '#text' nodes in the DOM tree.
+
+MDN suggests one weird workaround:
+
+<html
+  ><head
+    ><title
+      >Simple Document
+    </title
+  ></head
+>
+
+This markup takes advantage of the fact that carriage returns and spaces 
+inside the markup symbols are ignored by the browser.
+
+So it fixes the DOM tree at the expense of readability.
+An HTML minifier will also do the trick:
+
+<html><head><title>Simple document</title></head><body><div><p>There's not much to this.</p><p>Nor to this.
+</p></div></body></html>
+
+Another approach is to use JS to sniff out the junk nodes.
+<script>
+var nType = targetNode.nodeType;
+</script>
+
+If the node is an element like a 'div' or 'p', the value in nType
+will be the number 1.  A text node is number 3.
+
+Suppose you want to replace text...
+
+<div id="humpty">
+  <p>All the king's horses.</p>
+  <p>All the dude's crew.</p>
+  <p>All the town's orthopedists.</p>
+</div>
+
+Code...
+<script>
+var d = document.getElementById("humpty");
+var pCounter = 0;
+for (let i = 0; i < d.childNodes.length; i++) { 
+  if (d.childNodes[i].nodeType === 1) {
+    pCounter++;
+  }
+  if (pCounter === 2) {
+    d.childNodes[i].innerHTML = "All his men.";
+    break;
+  }
+}
+</script>
+
+If you know you'll possibly be replacing the contents of a
+markup element, it's much easier, and more common, to assign
+an id to the specific element.
+

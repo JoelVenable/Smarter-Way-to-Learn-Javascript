@@ -1,0 +1,47 @@
+Recall that getElementsByTagName returns an array-like object,
+containing all the elements that share the tag name.
+
+<script>
+var ul = document.getElementById("ul-id");
+var liElements = ul.getElementsByTagName("li");
+
+//  Once you have selected the elements, you can then count them
+//  using standard JS array properties.
+
+var howMany = liElements.length;
+
+//  Then we can cycle through the elements using a for loop:
+for (let i = 0; i < howMany; i++) {
+    if (liElements[i].innerHTML === "") {
+        liElements[i].innerHTML = "coming soon";
+    }
+}
+
+// Or how about...
+
+liElements.forEach(el => {
+    if (el.innerHTML === "") {
+        el.innerHTML = "coming soon";
+    } 
+});
+
+//  We can also do this by navigating the DOM, as we learned.
+
+var parentNode = document.getElementById("ul-id");
+var nodeList = parentNode.childNodes;
+//  This produces a similar array (perhaps with some #text nodes thrown in)
+//  to the above method.
+
+//  Then we can see how many nodes we have:
+
+var howManyKids = nodeList.length;
+
+var numPics = 0;
+nodeList.forEach(el => {
+    if (el.nodeName.toLowerCase() === "img") {
+        numPics++;
+    }
+});
+
+
+</script>

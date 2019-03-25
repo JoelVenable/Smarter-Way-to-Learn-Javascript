@@ -1,0 +1,34 @@
+<!--  Sample markup-->
+
+<p id="p1" class="c1" onmouseover="chgColor();"></p>
+
+<script>
+// In previous chapters we made collections of elements that share a 
+// tag name like this:
+
+var list = document.getElementsByTagName("p");
+
+// And children of an element like this:
+
+var list2 = document.getElementbyId("p1").childNodes;
+
+// We can also make a collection of the attributes:
+
+var attrList = document.getElementById("p1").attributes;
+
+// We can then get the number of attributes easily:
+
+var numItems = attrList.length;
+
+// We can also find out the name of any attribute in our array:
+
+var nName = attrList[2].nodeName;
+
+// With the markup above, nName is assigned 'onmouseover'.
+
+// We can also read the value:
+
+var nVal = attrList[2].nodeValue;  // "chgColor();"
+
+
+</script>

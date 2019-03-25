@@ -1,0 +1,60 @@
+
+
+<script>
+var eField = document.getElementById("email");
+
+var p = document.getElementsByTagName("p");
+//  p is an array-like element containing all 'p' tags in the document
+
+var contents = p[2].innerHTML;
+
+//  Can also narrow the focus to below the document level.
+
+var d = document.getElementById("div3");
+var d_p = d.getElementsByTagName("p");
+//  this time, d_p contains all 'p' tags in the DIV
+var contents = d_p[2].innerHTML;
+</script>
+
+
+<body>
+    <div id="cal">
+        <p>Southern Cal is sunny.</p>
+        <p>Northern Cal is rainy.</p>
+        <p>Eastern Cal is desert.</p> 
+    </div>
+    <div id="ny">
+        <p>Urban NY is crowded.</p>
+        <p>Rural NY is sparse.</p>
+    </div>
+</body>
+
+<!--  If you want to read contents of the last paragraph...-->
+
+<script>
+var p = document.getElementsByTagName("p");
+var contents = p[4].innerHTML;
+
+//  A narrower approach:
+var ny = document.getElementById("ny");
+var ny_p = ny.getElementsByTagName("p");
+var contents = ny_p[1].innerHTML;
+</script>
+
+<!-- Another way to traverse the DOM-->
+
+<script>
+var p = document.childNodes[0].childNodes[1].childNodes[1].childNodes[1];
+var contents = p.innerHTML;
+// document.childNodes[0] selects the HTML element.
+// .childNodes[1] selects the <body> element.
+// .childNodes[1] selects the second <div> element.
+// .childNodes[1] selects the second <p> element.
+
+// Note bene:  Sometimes browsers insert junk elements into the DOM which
+// affects placement of the childNodes.
+
+
+
+</script>
+
